@@ -1,0 +1,363 @@
+/* ==========================================================================
+   KARIGARI DESIGN SYSTEM & DESIGN TOKENS
+   Empowering Hands. Preserving Heritage. | हुनर से आत्मनिर्भरता तक।
+   ========================================================================== */
+
+:root {
+  /* Core Brand Tokens */
+  --dusty-pink: #D8A7AD;
+  --dusty-pink-hover: #c9939a;
+  --dusty-pink-dark: #A86B73;
+  --dusty-pink-light: #F7EFF0;
+  --dusty-pink-soft: #FCF7F7;
+
+  --sage-green: #A8B5A0;
+  --sage-green-hover: #96a58d;
+  --sage-green-dark: #64735C;
+  --sage-green-light: #F1F4EF;
+  --sage-green-border: #CBD4C6;
+
+  --warm-cream: #F6F0E7;
+  --warm-cream-alt: #EFE8DC;
+  --warm-cream-dark: #E2D7C5;
+
+  --soft-yellow: #E9D99A;
+  --soft-yellow-hover: #dfcd84;
+  --soft-yellow-light: #FCF9ED;
+  --soft-yellow-dark: #8C7B38;
+  --soft-yellow-border: #D8C783;
+
+  --deep-brown: #59473F;
+  --deep-brown-light: #735D53;
+  --deep-brown-dark: #3F322C;
+
+  --white: #FFFFFF;
+  --muted-grey: #817B76;
+  --light-grey: #B5AFA9;
+  --light-border: #E9E1D9;
+  --card-border: #E5DDD3;
+
+  /* Typography */
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-hindi: 'Noto Sans Devanagari', 'Plus Jakarta Sans', sans-serif;
+  --font-heading: 'Rozha One', 'Plus Jakarta Sans', serif;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(89, 71, 63, 0.05);
+  --shadow-md: 0 4px 14px rgba(89, 71, 63, 0.08);
+  --shadow-lg: 0 10px 25px rgba(89, 71, 63, 0.1);
+  --shadow-card: 0 2px 10px rgba(89, 71, 63, 0.04), 0 1px 3px rgba(89, 71, 63, 0.06);
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-color: var(--warm-cream);
+  color: var(--deep-brown);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+/* Ensure Hindi text inherits Devanagari font properly */
+[lang="hi"], .lang-hi {
+  font-family: var(--font-hindi);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--deep-brown);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.brand-heading {
+  font-family: var(--font-heading);
+  letter-spacing: 0.02em;
+}
+
+a {
+  color: var(--deep-brown);
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  outline: none;
+  transition: all var(--transition-fast);
+}
+
+button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--dusty-pink);
+  outline-offset: 2px;
+}
+
+input, select, textarea {
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--deep-brown);
+}
+
+/* ==========================================================================
+   ARTISANAL CRAFT UTILITIES & STITCHED ACCENTS
+   ========================================================================== */
+
+/* Handcrafted stitch border inspired by reference image 3 */
+.border-stitched {
+  border: 1.5px dashed var(--dusty-pink);
+}
+
+.border-stitched-subtle {
+  border: 1.5px dashed var(--light-border);
+}
+
+.border-stitched-sage {
+  border: 1.5px dashed var(--sage-green);
+}
+
+/* Artisan paper card */
+.artisan-card {
+  background: var(--white);
+  border: 1px solid var(--light-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.artisan-card-interactive:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--dusty-pink);
+}
+
+/* Botanical backdrop overlay inspired by reference image 1 */
+.botanical-bg {
+  background-image: url('/assets/1.png');
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
+.botanical-watermark {
+  position: relative;
+  overflow: hidden;
+}
+
+.botanical-watermark::after {
+  content: '';
+  position: absolute;
+  right: -20px;
+  bottom: -20px;
+  width: 140px;
+  height: 140px;
+  background-image: url('/assets/1.png');
+  background-size: cover;
+  opacity: 0.12;
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+/* Watercolor ambient aura inspired by reference image 2 */
+.watercolor-wash-bg {
+  background: linear-gradient(135deg, rgba(216, 167, 173, 0.18) 0%, rgba(246, 240, 231, 0.8) 50%, rgba(233, 217, 154, 0.22) 100%),
+              url('/assets/2.png');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Textile tag pill */
+.tag-textile {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid var(--light-border);
+  background: var(--warm-cream);
+  color: var(--deep-brown);
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--dusty-pink);
+  color: var(--deep-brown-dark);
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: var(--radius-md);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 2px 6px rgba(216, 167, 173, 0.4);
+  transition: all var(--transition-fast);
+}
+
+.btn-primary:hover {
+  background-color: var(--dusty-pink-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(216, 167, 173, 0.5);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background-color: var(--white);
+  color: var(--deep-brown);
+  border: 1.5px solid var(--light-border);
+  font-weight: 600;
+  padding: 11px 18px;
+  border-radius: var(--radius-md);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all var(--transition-fast);
+}
+
+.btn-secondary:hover {
+  background-color: var(--warm-cream);
+  border-color: var(--dusty-pink);
+}
+
+.btn-sage {
+  background-color: var(--sage-green);
+  color: var(--deep-brown-dark);
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: var(--radius-md);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 2px 6px rgba(168, 181, 160, 0.4);
+}
+
+.btn-sage:hover {
+  background-color: var(--sage-green-hover);
+  transform: translateY(-1px);
+}
+
+/* Status Badges */
+.badge-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.badge-in-progress {
+  background: var(--soft-yellow-light);
+  color: var(--soft-yellow-dark);
+  border: 1px solid var(--soft-yellow-border);
+}
+
+.badge-completed {
+  background: var(--sage-green-light);
+  color: var(--sage-green-dark);
+  border: 1px solid var(--sage-green-border);
+}
+
+.badge-not-started {
+  background: var(--warm-cream);
+  color: var(--muted-grey);
+  border: 1px solid var(--light-border);
+}
+
+.badge-urgent {
+  background: #FDF1EF;
+  color: #B43828;
+  border: 1px solid #F6CEC7;
+}
+
+.badge-paid {
+  background: var(--sage-green-light);
+  color: var(--sage-green-dark);
+  border: 1px solid var(--sage-green-border);
+}
+
+.badge-pending {
+  background: var(--soft-yellow-light);
+  color: var(--soft-yellow-dark);
+  border: 1px solid var(--soft-yellow-border);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--warm-cream);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--light-border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--dusty-pink);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.25s ease-out forwards;
+}
+
+/* Mobile device frame simulation container */
+.mobile-simulator-frame {
+  width: 100%;
+  max-width: 430px;
+  min-height: 844px;
+  background: var(--warm-cream);
+  border: 10px solid #2A2523;
+  border-radius: 42px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.22), 0 0 0 1px rgba(255,255,255,0.1);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-notch {
+  width: 120px;
+  height: 24px;
+  background: #2A2523;
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 50;
+}

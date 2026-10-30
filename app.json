@@ -1,0 +1,49 @@
+{
+  "expo": {
+    "name": "Karigari",
+    "slug": "karigari",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#F6F0E7"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.karigari.artisan"
+    },
+    "android": {
+      "package": "com.karigari.artisan",
+      "adaptiveIcon": {
+        "backgroundColor": "#F6F0E7",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow Karigari to access your photos for uploading order completion proof."
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "e3390696-4cea-4ca4-83f4-6f36b219bdfd"
+      }
+    },
+    "owner": "divya2177"
+  }
+}
